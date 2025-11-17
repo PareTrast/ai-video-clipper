@@ -1,4 +1,4 @@
-# AI Short-Form Content Clipper
+# MomentCutter
 
 This is a web application built with Streamlit that uses AI to automatically identify interesting moments in long-form video or audio content and create short, shareable clips.
 
@@ -88,3 +88,4 @@ To run this application locally, follow these steps:
 - **Numerical Operations**: NumPy
 
 ---
+
