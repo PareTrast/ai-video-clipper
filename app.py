@@ -31,11 +31,16 @@ with bottom():
         st.link_button("Buy Me a Coffee", "https://www.buymeacoffee.com/kdickerson")
 
 
+@st.cache_resource
+def load_model():
+    return whisper.load_model("base")
+
+
 # function to transcribe audio and return segments with timestamps
 def transcribe_audio(file_path):
     """Transcribes the audio from a given file path using OpeanAI's Whisper model"""
     st.info("Loading the transcription model...")
-    model = whisper.load_model("base")
+    model = load_model()
     st.info("Model loaded. Starting transcription...")
     result = model.transcribe(file_path)
     return result["segments"]
